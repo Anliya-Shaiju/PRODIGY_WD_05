@@ -1,0 +1,200 @@
+/* General Styling */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+    overflow: auto; /* Changed from hidden to auto */
+}
+  
+/* Weather App Container */
+.weather-container {
+    display: flex;
+    height: 100vh;
+    color: white;
+    transition: background 0.5s ease-in-out;
+}
+  
+/* Backgrounds for different weather */
+.weather-container.sunny {
+    background: linear-gradient(135deg, #FFD700, #FF8C00);
+}
+  
+.weather-container.cloudy {
+    background: linear-gradient(135deg, #B0C4DE, #778899);
+}
+  
+.weather-container.rainy {
+    background: linear-gradient(135deg, #4682B4, #2F4F4F);
+}
+  
+.weather-container.snowy {
+    background: linear-gradient(135deg, #E0FFFF, #ADD8E6);
+}
+  
+/* Side Section */
+.side-section {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-right: 1px solid rgba(255, 255, 255, 0.4);
+    width: 20%;
+    text-align: left;
+    overflow: visible; /* Ensure content is not hidden */
+}
+  
+.location {
+    font-family: 'Georgia', serif; /* Changing the font to Georgia */
+    font-size: 1.8rem;
+    font-weight: bold;  /* Makes the text bold */
+    margin-bottom: 10px;
+    color: #9a4040;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Adds a shadow to the text */
+}
+
+/* Additional styling suggestion: adding a background to the local-time */
+.local-time {
+    font-family: 'Georgia', serif; /* Changing the font to Georgia */
+    font-size: 1.2rem;
+    color: #9a4040;
+    font-weight: bold;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);  /* Adds a shadow to the text */
+    background-color: rgba(255, 255, 255, 0.2);  /* Adds a semi-transparent background */
+    padding: 5px;  /* Adds padding around the text */
+    border-radius: 5px;  /* Makes the background corners rounded */
+}
+
+
+  
+/* Main Section */
+.main-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+}
+  
+/* Search Section */
+.search-section {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+  
+.search-input {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    color: #181e1e;
+    padding: 10px;
+    border-radius: 20px;
+    outline: none;
+    width: 250px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+  
+.search-input::placeholder {
+    color: rgba(255, 255, 255, 0.8);
+}
+  
+.search-input:focus {
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #333;
+}
+  
+/* Button Styling */
+button {
+    border: none;
+    padding: 10px 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    background-color: #FF4500;
+    color: #553636;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+  
+button:hover {
+    background-color: #FF6347;
+    transform: scale(1.1);
+}
+  
+/* Weather Display Section */
+.weather-display {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+  
+.temperature {
+    font-size: 6rem;
+    font-weight: bold;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+}
+  
+.weather-description {
+    font-size: 1.8rem;
+    text-transform: capitalize;
+}
+  
+.weather-icon {
+    width: 100px;
+    height: 100px;
+}
+  
+/* Hourly Forecast Section */
+.hourly-forecast {
+    text-align: center;
+    width: 90%;
+}
+  
+.hourly-forecast h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+  
+.forecast-container {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    overflow-x: auto;
+    padding: 10px;
+}
+  
+.forecast-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 10px;
+    width: 100px;
+    text-align: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    color: #9a4040;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+  
+.forecast-item:hover {
+    transform: scale(1.1);
+    background-color: rgba(255, 255, 255, 0.4);
+    color: #333;
+}
+  
+.forecast-item img {
+    width: 50px;
+    height: 50px;
+}
+  
+.forecast-item h5 {
+    font-size: 1rem;
+    margin: 5px 0;
+}
+  
+.forecast-item p {
+    font-size: 1rem;
+    font-weight: bold;
+}
